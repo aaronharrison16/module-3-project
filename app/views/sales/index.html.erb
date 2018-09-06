@@ -1,0 +1,21 @@
+<h1>Sales</h1>
+
+<tbody>
+  <% @sales.each do |sale| %>
+    <tr>
+      <td>
+        <%= sale.title %>
+      </td>
+      <td>
+        <%= sale.description %>
+      </td>
+      <td>
+        <%= sale.qty_available %>
+      </td>
+      <td>
+        <%= link_to 'Edit', edit_sale_path(sale), id: "edit_#{sale.id}" %>
+      </td>
+    </tr>
+    <hr>
+  <% end %>
+</tbody>
